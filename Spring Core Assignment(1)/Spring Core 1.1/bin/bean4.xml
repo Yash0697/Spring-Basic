@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <bean id="emp1" class="com.springcore4.Employee" > 
+       <property name="empId" value="76"/>       
+       <property name="empName" value="Yash"/>
+       <property name="salary" value="50000.0"/>
+   </bean>
+   <bean id="emp2" class="com.springcore4.Employee" > 
+       <constructor-arg value="100"></constructor-arg>  
+		<constructor-arg value="Ramprasad"></constructor-arg>
+		<constructor-arg value="50000.67"></constructor-arg>  
+   </bean>
+   <bean id="sbubean" class="com.springcore4.SBU" >  
+		<constructor-arg><list>
+			<ref bean = "emp1"></ref>
+			<ref bean = "emp2"></ref>
+		</list></constructor-arg> 
+   </bean>
+</beans>
