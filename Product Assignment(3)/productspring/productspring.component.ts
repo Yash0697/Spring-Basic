@@ -38,7 +38,7 @@ export class ProductspringComponent implements OnInit {
     //   {
     //   alert("Product created successfully.");
     //   });
-    this.myService.addProduct1(this.queryString).subscribe(data => {
+    this.myService.addProduct(this.product).subscribe(data => {
     });
       alert("Product created successfully.");
        this.ngOnInit();
